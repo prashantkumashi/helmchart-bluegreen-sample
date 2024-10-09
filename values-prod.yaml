@@ -1,0 +1,13 @@
+replicaCount: 3
+env: prod
+color: blue
+namespace: prod
+sampleConfig:
+  config1: "value1-prod"
+  config2: "value2-prod"
+  config3: "value3-prod"
+image:
+  tag: prod-latest
+ingress:
+  host: "tomcat-app.prod.example.com"
+  tlsSecret: "tomcat-tls-secret-prod"
