@@ -1,0 +1,14 @@
+replicaCount: 2
+image:
+  repository: your-docker-repo/tomcat
+  tag: latest
+color: blue
+env: dev
+namespace: default
+sampleConfig:
+  config1: "value1-dev"
+  config2: "value2-dev"
+  config3: "value3-dev"
+ingress:
+  host: "tomcat-app.dev.example.com"
+  tlsSecret: "tomcat-tls-secret"
