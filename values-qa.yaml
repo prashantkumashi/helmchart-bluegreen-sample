@@ -1,0 +1,13 @@
+replicaCount: 2
+env: qa
+color: green
+namespace: qa
+sampleConfig:
+  config1: "value1-qa"
+  config2: "value2-qa"
+  config3: "value3-qa"
+image:
+  tag: qa-latest
+ingress:
+  host: "tomcat-app.qa.example.com"
+  tlsSecret: "tomcat-tls-secret-qa"
