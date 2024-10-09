@@ -1,0 +1,13 @@
+replicaCount: 1
+env: dev
+color: blue
+namespace: dev
+sampleConfig:
+  config1: "value1-dev"
+  config2: "value2-dev"
+  config3: "value3-dev"
+image:
+  tag: dev-latest
+ingress:
+  host: "tomcat-app.dev.example.com"
+  tlsSecret: "tomcat-tls-secret"
