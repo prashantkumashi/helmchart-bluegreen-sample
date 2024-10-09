@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  namespace: {{ .Values.namespace }}
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}
+    app.kubernetes.io/instance: {{ .Release.Name }}-{{ .Values.color }}
+    app.kubernetes.io/component: configuration
+    app.kubernetes.io/part-of: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  application.properties: |
+    app.name=SampleApp
+    app.version=1.0
+    app.environment={{ .Values.env }}
+  sample.config1: {{ .Values.sampleConfig.config1 }}
+  sample.config2: {{ .Values.sampleConfig.config2 }}
+  sample.config3: {{ .Values.sampleConfig.config3 }}
